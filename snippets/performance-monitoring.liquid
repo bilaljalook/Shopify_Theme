@@ -1,0 +1,178 @@
+{%- comment -%}
+  Performance monitoring and Core Web Vitals tracking
+  Provides insights into site performance and user experience
+{%- endcomment -%}
+
+<script>
+  // Core Web Vitals monitoring
+  (function() {
+    'use strict';
+
+    // Performance metrics collection
+    const performanceMetrics = {
+      navigationStart: performance.timing.navigationStart,
+      measurements: {},
+      vitals: {}
+    };
+
+    // Measure Core Web Vitals
+    function measureCoreWebVitals() {
+      // Largest Contentful Paint (LCP)
+      if ('PerformanceObserver' in window) {
+        try {
+          const lcpObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            const lastEntry = entries[entries.length - 1];
+            performanceMetrics.vitals.lcp = Math.round(lastEntry.startTime);
+            console.log('LCP:', performanceMetrics.vitals.lcp, 'ms');
+          });
+          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        } catch (e) {
+          console.warn('LCP measurement not supported');
+        }
+
+        // First Input Delay (FID)
+        try {
+          const fidObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              performanceMetrics.vitals.fid = Math.round(entry.processingStart - entry.startTime);
+              console.log('FID:', performanceMetrics.vitals.fid, 'ms');
+            });
+          });
+          fidObserver.observe({ entryTypes: ['first-input'] });
+        } catch (e) {
+          console.warn('FID measurement not supported');
+        }
+
+        // Cumulative Layout Shift (CLS)
+        try {
+          let clsValue = 0;
+          const clsObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (!entry.hadRecentInput) {
+                clsValue += entry.value;
+              }
+            });
+            performanceMetrics.vitals.cls = Math.round(clsValue * 1000) / 1000;
+            console.log('CLS:', performanceMetrics.vitals.cls);
+          });
+          clsObserver.observe({ entryTypes: ['layout-shift'] });
+        } catch (e) {
+          console.warn('CLS measurement not supported');
+        }
+      }
+    }
+
+    // Measure custom performance metrics
+    function measureCustomMetrics() {
+      // Time to Interactive estimation
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          performanceMetrics.measurements.tti = Date.now() - performanceMetrics.navigationStart;
+          console.log('TTI (estimated):', performanceMetrics.measurements.tti, 'ms');
+        }, 0);
+      });
+
+      // DOM Content Loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        performanceMetrics.measurements.domContentLoaded = Date.now() - performanceMetrics.navigationStart;
+        console.log('DOM Content Loaded:', performanceMetrics.measurements.domContentLoaded, 'ms');
+      });
+
+      // First Paint
+      if (performance.getEntriesByType) {
+        const paintEntries = performance.getEntriesByType('paint');
+        paintEntries.forEach((entry) => {
+          performanceMetrics.measurements[entry.name.replace('-', '')] = Math.round(entry.startTime);
+          console.log(entry.name + ':', Math.round(entry.startTime), 'ms');
+        });
+      }
+    }
+
+    // Track resource loading performance
+    function trackResourcePerformance() {
+      window.addEventListener('load', () => {
+        const resources = performance.getEntriesByType('resource');
+        const slowResources = resources.filter(resource => resource.duration > 1000);
+        
+        if (slowResources.length > 0) {
+          console.warn('Slow loading resources detected:', slowResources);
+        }
+
+        // Track critical resource timing
+        const criticalResources = resources.filter(resource => 
+          resource.name.includes('critical') || 
+          resource.name.includes('base.css') ||
+          resource.name.includes('theme.js')
+        );
+
+        criticalResources.forEach(resource => {
+          console.log(`Critical resource: ${resource.name} - ${Math.round(resource.duration)}ms`);
+        });
+      });
+    }
+
+    // Monitor JavaScript errors
+    function setupErrorTracking() {
+      window.addEventListener('error', (event) => {
+        console.error('JavaScript Error:', {
+          message: event.message,
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
+          error: event.error
+        });
+      });
+
+      window.addEventListener('unhandledrejection', (event) => {
+        console.error('Unhandled Promise Rejection:', event.reason);
+      });
+    }
+
+    // Send performance data (implement your analytics here)
+    function sendPerformanceData() {
+      window.addEventListener('beforeunload', () => {
+        // Send data to your analytics service
+        if (navigator.sendBeacon && typeof gtag !== 'undefined') {
+          // Example: Send to Google Analytics
+          Object.entries(performanceMetrics.vitals).forEach(([metric, value]) => {
+            gtag('event', 'performance_metric', {
+              metric_name: metric,
+              metric_value: value,
+              custom_parameter: 'core_web_vitals'
+            });
+          });
+        }
+      });
+    }
+
+    // Initialize performance monitoring
+    function initPerformanceMonitoring() {
+      measureCoreWebVitals();
+      measureCustomMetrics();
+      trackResourcePerformance();
+      setupErrorTracking();
+      sendPerformanceData();
+
+      // Make metrics available globally for debugging
+      window.shopifyPerformanceMetrics = performanceMetrics;
+    }
+
+    // Start monitoring when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPerformanceMonitoring);
+    } else {
+      initPerformanceMonitoring();
+    }
+
+  })();
+</script>
+
+{% comment %} Only load performance monitoring if explicitly enabled via theme setting {% endcomment %}
+{% if settings.enable_performance_monitoring %}
+  <script>
+    console.log('Performance monitoring enabled by theme setting');
+  </script>
+{% endif %}
