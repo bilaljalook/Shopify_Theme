@@ -40,10 +40,10 @@
         },
         "blog-post-details": {
           "type": "_blog-post-info-text",
-          "name": "Blog post details",
+          "name": "Details",
           "static": true,
           "settings": {
-            "show_date": false,
+            "show_date": true,
             "show_author": false,
             "type_preset": "",
             "alignment": "center",

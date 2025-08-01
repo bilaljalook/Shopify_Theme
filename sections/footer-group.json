@@ -301,7 +301,7 @@
                   "type": "_social-link",
                   "name": "Facebook",
                   "settings": {
-                    "link": "https://www.facebook.com"
+                    "link": "https://www.facebook.com/"
                   },
                   "blocks": {}
                 },
@@ -309,7 +309,7 @@
                   "type": "_social-link",
                   "name": "Instagram",
                   "settings": {
-                    "link": "https://www.instagram.com"
+                    "link": "https://www.instagram.com/"
                   },
                   "blocks": {}
                 },
@@ -317,7 +317,7 @@
                   "type": "_social-link",
                   "name": "TikTok",
                   "settings": {
-                    "link": "https://www.tiktok.com"
+                    "link": "https://www.tiktok.com/"
                   },
                   "blocks": {}
                 },
@@ -325,7 +325,7 @@
                   "type": "_social-link",
                   "name": "X / Twitter",
                   "settings": {
-                    "link": "https://twitter.com"
+                    "link": "https://twitter.com/"
                   },
                   "blocks": {}
                 },
@@ -333,7 +333,7 @@
                   "type": "_social-link",
                   "name": "YouTube",
                   "settings": {
-                    "link": "https://www.youtube.com"
+                    "link": "https://www.youtube.com/"
                   },
                   "blocks": {}
                 }

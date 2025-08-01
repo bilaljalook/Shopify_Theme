@@ -148,7 +148,7 @@
       "block_order": [
         "group_we9NFt"
       ],
-      "name": "t:names.collections_grid",
+      "name": "Collection list",
       "settings": {
         "layout_type": "grid",
         "carousel_on_mobile": false,

@@ -96,7 +96,7 @@
     "product_grid_main": "Produktrutnät",
     "product_image": "Produktbild",
     "product_information": "Produktinformation",
-    "product_list": "Produktlista",
+    "product_list": "Utvald produktserie",
     "product_review_stars": "Recensionsstjärnor",
     "quantity": "Kvantitet",
     "row": "Rad",
@@ -153,16 +153,17 @@
     "policy_list": "Policylänkar",
     "prices": "Priser",
     "product_list_button": "Visa alla-knapp",
-    "products_carousel": "Produktlista: Karusell",
-    "products_editorial": "Produktlista: Redaktionell",
-    "products_grid": "Produktlista: Rutnät",
+    "products_carousel": "Utvald produktserie: karusell",
+    "products_editorial": "Utvald produktserie: redaktionell",
+    "products_grid": "Utvald produktserie: rutnät",
     "social_link": "Länk till sociala medier",
     "split_showcase": "Split-showcase",
     "variant_pickers": "Variantväljare",
     "pills": "Knappar",
     "large_logo": "Stor logotyp",
     "product_inventory": "Produktlager",
-    "description": "Beskrivning"
+    "description": "Beskrivning",
+    "featured_image": "Utvald bild"
   },
   "settings": {
     "alignment": "Justering",
@@ -490,7 +491,9 @@
     "show_second_image_on_hover": "Visa den andra bilden vid hovring",
     "media": "Media",
     "product_card_carousel": "Visa karusell",
-    "media_fit": "Medieanpassning"
+    "media_fit": "Mediaanpassning",
+    "scroll_speed": "Tid till nästa meddelande",
+    "show_powered_by_shopify": "Visa ”Drivs av Shopify”"
   },
   "options": {
     "adapt_to_image": "Anpassa till bild",
@@ -835,7 +838,6 @@
     "carousel": "Karusell",
     "colors": "Färger",
     "collection_page": "Produktseriesida",
-    "copyright_info": "Läs om hur du [redigerar upphovsrättsinformationen](https://help.shopify.com/manual/online-store/themes/customizing-themes/remove-powered-by-shopify-message)",
     "customer_account": "Kundkonto",
     "edit_empty_state_collection_in_theme_settings": "Redigera tomt tillstånd för kollektion i [temainställningar](/editor?context=theme&category=search)",
     "grid_layout": "Rutnätslayout",
@@ -916,7 +918,7 @@
     "layout": "Layout",
     "links": "Länkar",
     "product": "Produkt",
-    "product_list": "Produktlista",
+    "product_list": "Utvald produktserie",
     "banners": "Banners",
     "collections": "Produktserier",
     "custom": "Anpassad",
