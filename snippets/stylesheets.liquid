@@ -1,2 +1,25 @@
+<!-- Critical CSS - Inline for performance -->
+<style>
+  {% render 'critical-css-inline' %}
+</style>
+
+<!-- Preload important assets -->
 {{ 'overflow-list.css' | asset_url | preload_tag: as: 'style' }}
+{{ 'base.css' | asset_url | preload_tag: as: 'style' }}
+
+<!-- Load critical CSS immediately -->
+{{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
+
+<!-- Load main stylesheet with preload -->
 {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
+
+<!-- Preload fonts -->
+{% if settings.type_header_font.family %}
+  {{ settings.type_header_font | font_face: font_display: 'swap' }}
+  <link rel="preload" href="{{ settings.type_header_font | font_url }}" as="font" type="font/woff2" crossorigin>
+{% endif %}
+
+{% if settings.type_body_font.family %}
+  {{ settings.type_body_font | font_face: font_display: 'swap' }}
+  <link rel="preload" href="{{ settings.type_body_font | font_url }}" as="font" type="font/woff2" crossorigin>
+{% endif %}
