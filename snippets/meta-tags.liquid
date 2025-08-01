@@ -13,37 +13,20 @@
 >
 <meta
   name="theme-color"
-  content="{{ settings.colors_accent_1 | color: 'hex' }}"
+  content=""
 >
-
-<!-- Performance Optimization -->
-<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-<link rel="dns-prefetch" href="//productreviews.shopifycdn.com">
-<link rel="dns-prefetch" href="//ajax.googleapis.com">
-<link rel="dns-prefetch" href="//www.google-analytics.com">
 
 {%- liquid
   assign og_title = page_title | default: shop.name
   assign og_url = canonical_url | default: request.origin
   assign og_type = 'website'
-  
-  # Enhanced description logic
-  if request.page_type == 'product'
-    assign og_description = product.description | strip_html | truncate: 160
-    assign og_type = 'product'
-  elsif request.page_type == 'collection'
-    assign og_description = collection.description | strip_html | truncate: 160 | default: 'Shop our ' | append: collection.title | append: ' collection'
-  elsif request.page_type == 'article'
-    assign og_description = article.excerpt | default: article.content | strip_html | truncate: 160
-    assign og_type = 'article'
-  elsif request.page_type == 'page'
-    assign og_description = page.content | strip_html | truncate: 160
-  else
-    assign og_description = page_description | default: shop.description | default: shop.name
-  endif
+  assign og_description = page_description | default: shop.description | default: shop.name
 
-  if request.page_type == 'password'
+  if request.page_type == 'product'
+    assign og_type = 'product'
+  elsif request.page_type == 'article'
+    assign og_type = 'article'
+  elsif request.page_type == 'password'
     assign og_url = request.origin
   endif
 %}
@@ -135,31 +118,4 @@
     name="description"
     content="{{ page_description | escape }}"
   >
-{% else %}
-  <meta
-    name="description"
-    content="{{ og_description | escape }}"
-  >
-{% endif %}
-
-<!-- Additional SEO Meta Tags -->
-{% if request.page_type == 'product' %}
-  <meta name="product:price:amount" content="{{ product.selected_or_first_available_variant.price | money_without_currency }}">
-  <meta name="product:price:currency" content="{{ cart.currency.iso_code }}">
-  {% if product.selected_or_first_available_variant.available %}
-    <meta name="product:availability" content="in stock">
-  {% else %}
-    <meta name="product:availability" content="out of stock">
-  {% endif %}
-{% endif %}
-
-<!-- Robots Meta -->
-{% if template contains '404' %}
-  <meta name="robots" content="noindex, nofollow">
-{% elsif template contains 'search' %}
-  <meta name="robots" content="noindex, follow">
-{% elsif settings.password_page_password != blank and template != 'password' %}
-  <meta name="robots" content="noindex, nofollow">
-{% else %}
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 {% endif %}
