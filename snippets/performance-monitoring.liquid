@@ -170,9 +170,9 @@
   })();
 </script>
 
-{% comment %} Only load in development or when explicitly enabled {% endcomment %}
-{% if shop.domain contains 'myshopify.com' or request.host contains 'localhost' %}
+{% comment %} Only load performance monitoring if explicitly enabled via theme setting {% endcomment %}
+{% if settings.enable_performance_monitoring %}
   <script>
-    console.log('Performance monitoring enabled for development');
+    console.log('Performance monitoring enabled by theme setting');
   </script>
 {% endif %}

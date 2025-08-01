@@ -24,11 +24,23 @@
     "url": "{{ settings.logo | image_url }}"
   },
   {% endif %}
+  {%- assign social_links = "" | split: "" -%}
+  {%- if settings.social_facebook_link != blank -%}
+    {%- assign social_links = social_links | push: settings.social_facebook_link -%}
+  {%- endif -%}
+  {%- if settings.social_instagram_link != blank -%}
+    {%- assign social_links = social_links | push: settings.social_instagram_link -%}
+  {%- endif -%}
+  {%- if settings.social_twitter_link != blank -%}
+    {%- assign social_links = social_links | push: settings.social_twitter_link -%}
+  {%- endif -%}
+  {%- if settings.social_youtube_link != blank -%}
+    {%- assign social_links = social_links | push: settings.social_youtube_link -%}
+  {%- endif -%}
   "sameAs": [
-    {% if settings.social_facebook_link != blank %}"{{ settings.social_facebook_link }}"{% unless settings.social_instagram_link == blank or settings.social_twitter_link == blank or settings.social_youtube_link == blank %},{% endunless %}{% endif %}
-    {% if settings.social_instagram_link != blank %}"{{ settings.social_instagram_link }}"{% unless settings.social_twitter_link == blank or settings.social_youtube_link == blank %},{% endunless %}{% endif %}
-    {% if settings.social_twitter_link != blank %}"{{ settings.social_twitter_link }}"{% unless settings.social_youtube_link == blank %},{% endunless %}{% endif %}
-    {% if settings.social_youtube_link != blank %}"{{ settings.social_youtube_link }}"{% endif %}
+    {%- for link in social_links -%}
+      "{{ link }}"{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
   ]
 }
 </script>
@@ -60,7 +72,7 @@
     "@type": "Offer",
     "url": "{{ shop.url }}{{ product.url }}",
     "priceCurrency": "{{ cart.currency.iso_code }}",
-    "price": "{{ product.selected_or_first_available_variant.price | money_without_currency }}",
+    "price": {{ product.selected_or_first_available_variant.price | divided_by: 100.0 }},
     {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
     "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
     {% endif %}

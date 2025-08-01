@@ -40,6 +40,9 @@ class PerformanceOptimizer {
     loadLazyLoadingPolyfill() {
         const script = document.createElement('script');
         script.src = 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js';
+        // SRI hash for vanilla-lazyload@17.8.3 (update if version changes)
+        script.integrity = 'sha384-5QwDFi1Cdm42Hcps225y7sY9qsK0kGugHgd6NqBJ38qRAjPR9U1FVLtZL1NVr7Di';
+        script.crossOrigin = 'anonymous';
         script.onload = () => {
             new LazyLoad({
                 elements_selector: 'img[data-src], [data-bg]',
