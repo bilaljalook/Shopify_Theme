@@ -397,12 +397,12 @@
       },
       "name": "t:names.media_with_text",
       "settings": {
-        "media_position": "right",
+        "media_position": "left",
         "media_width": "medium",
         "media_height": "80svh",
         "section_width": "page-width",
         "extend_media": true,
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
