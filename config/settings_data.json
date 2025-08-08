@@ -10,14 +10,15 @@
 {
   "current": {
     "logo": "shopify://shop_images/Syrianista_logo_transparent.png",
-    "type_body_font": "instrument_sans_n4",
-    "type_subheading_font": "instrument_sans_n4",
-    "type_heading_font": "instrument_sans_n4",
+    "type_body_font": "poppins_n4",
+    "type_subheading_font": "poppins_n5",
+    "type_heading_font": "playfair_display_n7",
     "type_accent_font": "instrument_sans_n4",
     "type_size_paragraph": "14",
     "type_line_height_paragraph": "body-loose",
-    "type_font_h1": "secondary",
+    "type_font_h1": "heading",
     "type_size_h1": "72",
+    "type_case_h1": "uppercase",
     "type_size_h2": "48",
     "type_line_height_h2": "display-normal",
     "type_letter_spacing_h2": "heading-normal",
@@ -34,8 +35,11 @@
     "badge_font_family": "body",
     "badge_text_transform": "none",
     "primary_button_border_width": 0,
+    "type_font_button_primary": "body",
     "secondary_button_border_width": 1,
     "cart_type": "drawer",
+    "auto_open_cart_drawer": false,
+    "drawer_drop_shadow": false,
     "input_border_width": 0,
     "popover_color_scheme": "scheme-1",
     "popover_border": "none",
@@ -639,5 +643,8 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": []
   }
 }
