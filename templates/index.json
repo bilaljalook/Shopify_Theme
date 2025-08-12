@@ -16,10 +16,10 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>High-quality textiles, transformed <br/>into heirloom-quality garments.</h2>",
+            "text": "<p>Luxury Garments Inspired by Heritage, Built for Today.</p>",
             "width": "fit-content",
             "max_width": "narrow",
-            "alignment": "left",
+            "alignment": "center",
             "type_preset": "h2",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
@@ -27,7 +27,7 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "var(--color-foreground)",
+            "color": "var(--color-foreground-heading)",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -142,7 +142,7 @@
       "name": "Collection list: Editorial",
       "settings": {
         "collection_list": [
-          "frontpage",
+          "t-shirts",
           "appareal"
         ],
         "layout_type": "editorial",
