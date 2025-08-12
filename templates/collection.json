@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "section": {
       "type": "section",
@@ -131,6 +132,7 @@
             "group": {
               "type": "_product-card-group",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -240,7 +242,7 @@
         }
       },
       "settings": {
-        "layout_type": "organic",
+        "layout_type": "grid",
         "product_card_size": "medium",
         "mobile_product_card_size": "small",
         "product_grid_width": "centered",
