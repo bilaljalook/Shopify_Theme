@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "product-information": {
       "type": "product-information",
@@ -70,6 +71,7 @@
               "type": "group",
               "name": "Details container",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -94,6 +96,7 @@
                 "border_width": 1,
                 "border_opacity": 100,
                 "border_radius": 0,
+                "placeholder": "",
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
@@ -108,6 +111,7 @@
                   "type": "group",
                   "name": "Title and price",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "column",
                     "vertical_on_mobile": true,
@@ -132,6 +136,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -273,6 +278,7 @@
                   "type": "group",
                   "name": "Info icons",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "row",
                     "vertical_on_mobile": false,
@@ -297,6 +303,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -311,6 +318,7 @@
                       "type": "group",
                       "name": "Icon group",
                       "settings": {
+                        "link": "",
                         "open_in_new_tab": false,
                         "content_direction": "column",
                         "vertical_on_mobile": false,
@@ -335,6 +343,7 @@
                         "border_width": 1,
                         "border_opacity": 100,
                         "border_radius": 0,
+                        "placeholder": "",
                         "toggle_overlay": false,
                         "overlay_color": "#00000026",
                         "overlay_style": "solid",
@@ -350,6 +359,7 @@
                           "settings": {
                             "icon": "heart",
                             "width": 32,
+                            "link": "",
                             "open_in_new_tab": false
                           },
                           "blocks": {}
@@ -401,6 +411,7 @@
                       "type": "group",
                       "name": "Icon group",
                       "settings": {
+                        "link": "",
                         "open_in_new_tab": false,
                         "content_direction": "column",
                         "vertical_on_mobile": false,
@@ -425,6 +436,7 @@
                         "border_width": 1,
                         "border_opacity": 100,
                         "border_radius": 0,
+                        "placeholder": "",
                         "toggle_overlay": false,
                         "overlay_color": "#00000026",
                         "overlay_style": "solid",
@@ -440,6 +452,7 @@
                           "settings": {
                             "icon": "serving_dish",
                             "width": 32,
+                            "link": "",
                             "open_in_new_tab": false
                           },
                           "blocks": {}
@@ -491,6 +504,7 @@
                       "type": "group",
                       "name": "Icon group",
                       "settings": {
+                        "link": "",
                         "open_in_new_tab": false,
                         "content_direction": "column",
                         "vertical_on_mobile": false,
@@ -515,6 +529,7 @@
                         "border_width": 1,
                         "border_opacity": 100,
                         "border_radius": 0,
+                        "placeholder": "",
                         "toggle_overlay": false,
                         "overlay_color": "#00000026",
                         "overlay_style": "solid",
@@ -530,6 +545,7 @@
                           "settings": {
                             "icon": "leather",
                             "width": 32,
+                            "link": "",
                             "open_in_new_tab": false
                           },
                           "blocks": {}
@@ -581,6 +597,7 @@
                       "type": "group",
                       "name": "Icon group",
                       "settings": {
+                        "link": "",
                         "open_in_new_tab": false,
                         "content_direction": "column",
                         "vertical_on_mobile": false,
@@ -605,6 +622,7 @@
                         "border_width": 1,
                         "border_opacity": 100,
                         "border_radius": 0,
+                        "placeholder": "",
                         "toggle_overlay": false,
                         "overlay_color": "#00000026",
                         "overlay_style": "solid",
@@ -620,6 +638,7 @@
                           "settings": {
                             "icon": "shirt",
                             "width": 32,
+                            "link": "",
                             "open_in_new_tab": false
                           },
                           "blocks": {}
@@ -851,6 +870,8 @@
           "static": true,
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/unisex-garment-dyed-heavyweight-t-shirt-white-front-688b605b48ff4.jpg",
+            "link": "",
             "video_loop": true,
             "video_autoplay": false,
             "image_position": "cover",
@@ -883,6 +904,7 @@
               "type": "group",
               "name": "Row",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "row",
                 "vertical_on_mobile": true,
@@ -907,6 +929,7 @@
                 "border_width": 1,
                 "border_opacity": 100,
                 "border_radius": 0,
+                "placeholder": "",
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
@@ -921,6 +944,7 @@
                   "type": "group",
                   "name": "Heading",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "column",
                     "vertical_on_mobile": true,
@@ -945,6 +969,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -990,6 +1015,7 @@
                   "type": "group",
                   "name": "Content",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "column",
                     "vertical_on_mobile": true,
@@ -1014,6 +1040,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -1077,6 +1104,7 @@
               "type": "group",
               "name": "Row",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "row",
                 "vertical_on_mobile": true,
@@ -1101,6 +1129,7 @@
                 "border_width": 1,
                 "border_opacity": 100,
                 "border_radius": 0,
+                "placeholder": "",
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
@@ -1115,6 +1144,7 @@
                   "type": "group",
                   "name": "Heading",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "column",
                     "vertical_on_mobile": true,
@@ -1139,6 +1169,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -1184,6 +1215,7 @@
                   "type": "group",
                   "name": "Content",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "column",
                     "vertical_on_mobile": true,
@@ -1208,6 +1240,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -1271,6 +1304,7 @@
               "type": "group",
               "name": "Row",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "row",
                 "vertical_on_mobile": true,
@@ -1295,6 +1329,7 @@
                 "border_width": 1,
                 "border_opacity": 100,
                 "border_radius": 0,
+                "placeholder": "",
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
@@ -1309,6 +1344,7 @@
                   "type": "group",
                   "name": "Heading",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "column",
                     "vertical_on_mobile": true,
@@ -1333,6 +1369,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -1378,6 +1415,7 @@
                   "type": "group",
                   "name": "Content",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "column",
                     "vertical_on_mobile": true,
@@ -1402,6 +1440,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -1538,6 +1577,7 @@
             "group_GRhihq": {
               "type": "_product-card-group",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
