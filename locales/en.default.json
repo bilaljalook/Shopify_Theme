@@ -276,12 +276,5 @@
       "sold_out": "Sold out",
       "unavailable": "Unavailable"
     }
-  },
-  "shopify": {
-    "checkout": {
-      "contact": {
-        "phone_placeholder": "Phone (optional)"
-      }
-    }
   }
 }
