@@ -216,6 +216,7 @@
                 "menu_jEkHqD": {
                   "type": "menu",
                   "name": "t:names.menu",
+                  "disabled": true,
                   "settings": {
                     "menu": "",
                     "heading": "Support",
