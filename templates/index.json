@@ -172,7 +172,7 @@
           "settings": {
             "media_type": "image",
             "image": "shopify://shop_images/unisex-premium-pique-polo-shirt-white-front-688b5ea480d23_527c23f5-a9aa-4f9a-bb4a-2824b987ea36.jpg",
-            "link": "shopify://products/syrian-identity-embroidered-premium-polo-shirt",
+            "link": "shopify://products/syrian-heritage-premium-polo",
             "video_loop": true,
             "video_autoplay": false,
             "image_position": "contain",
@@ -357,7 +357,7 @@
                   "name": "Button",
                   "settings": {
                     "label": "Check it Out!",
-                    "link": "shopify://products/syrian-identity-embroidered-premium-polo-shirt",
+                    "link": "shopify://products/syrian-heritage-premium-polo",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
