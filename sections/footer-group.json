@@ -109,7 +109,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "color": "",
+                    "color": "var(--color-foreground)",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -124,7 +124,7 @@
                   "type": "text",
                   "name": "Text",
                   "settings": {
-                    "text": "<p>Syrianista blends timeless design with Syrian heritage. Each piece is crafted from premium materials, made to last, and produced on demand to reduce waste.</p>",
+                    "text": "<p>Syrianista is a Berlin brand for people who choose clarity. Every piece carries the <strong>Identity Eagle</strong>—a quiet mark for strength, renewal, and belonging. Premium materials, on-demand production, less waste.</p>",
                     "width": "100%",
                     "max_width": "narrow",
                     "alignment": "left",
