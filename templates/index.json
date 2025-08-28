@@ -37,10 +37,37 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "text_wbJx36": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<p>Clean, modern pieces with the Identity Eagle—made to wear your story, not the noise.</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "h5",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground-heading)",
+            "background": true,
+            "background_color": "#00000026",
+            "corner_radius": 14,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "text_kfVmdT"
+        "text_kfVmdT",
+        "text_wbJx36"
       ],
       "name": "Heading",
       "settings": {
