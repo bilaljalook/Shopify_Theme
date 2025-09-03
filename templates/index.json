@@ -220,7 +220,7 @@
               "type": "text",
               "name": "Text",
               "settings": {
-                "text": "<p>Our Featured Premium</p>",
+                "text": "<p>Featured Premium</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
