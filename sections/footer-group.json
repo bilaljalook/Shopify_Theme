@@ -300,13 +300,13 @@
             },
             "social_icons": {
               "type": "_footer-social-icons",
-              "disabled": true,
               "static": true,
               "settings": {},
               "blocks": {
                 "social_link_threads": {
                   "type": "_social-link",
                   "name": "Facebook",
+                  "disabled": true,
                   "settings": {
                     "link": "https://www.facebook.com/"
                   },
@@ -315,6 +315,7 @@
                 "social_link_insta": {
                   "type": "_social-link",
                   "name": "Instagram",
+                  "disabled": true,
                   "settings": {
                     "link": "https://www.instagram.com/"
                   },
@@ -324,13 +325,14 @@
                   "type": "_social-link",
                   "name": "TikTok",
                   "settings": {
-                    "link": "https://www.tiktok.com/"
+                    "link": "https://www.tiktok.com/@bb_ecom?is_from_webapp=1&sender_device=pc"
                   },
                   "blocks": {}
                 },
                 "social_link_BHeAHR": {
                   "type": "_social-link",
                   "name": "X / Twitter",
+                  "disabled": true,
                   "settings": {
                     "link": "https://twitter.com/"
                   },
@@ -339,6 +341,7 @@
                 "social_link_youtube": {
                   "type": "_social-link",
                   "name": "YouTube",
+                  "disabled": true,
                   "settings": {
                     "link": "https://www.youtube.com/"
                   },
