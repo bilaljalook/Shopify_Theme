@@ -1,0 +1,32 @@
+/* Base direction */
+html[dir="rtl"] body { direction: rtl; }
+
+/* Logical spacing (safer than L/R) */
+html[dir="rtl"] .container,
+html[dir="rtl"] .section,
+html[dir="rtl"] .grid,
+html[dir="rtl"] .page-width {
+  padding-inline-start: var(--space, 1rem);
+  padding-inline-end: var(--space, 1rem);
+}
+
+/* Common text align fixes if theme uses ".text-left/right" */
+html[dir="rtl"] body .text-left { text-align: right; }
+html[dir="rtl"] body .text-right { text-align: left; }
+
+/* Breadcrumbs / chevrons / arrows */
+html[dir="rtl"] .breadcrumb__separator,
+html[dir="rtl"] .icon--chevron,
+html[dir="rtl"] .icon-chevron {
+  transform: scaleX(-1);
+}
+
+/* Sliders / carousels that rely on scroll-snap/flex row */
+html[dir="rtl"] .slider,
+html[dir="rtl"] .carousel,
+html[dir="rtl"] .product-gallery {
+  direction: rtl;
+}
+
+/* Utility: force LTR for SKUs, emails, URLs */
+html[dir="rtl"] .u-ltr { direction: ltr; unicode-bidi: plaintext; }
