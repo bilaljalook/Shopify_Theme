@@ -1701,7 +1701,100 @@
       "manage": "يدير",
       "manage_accessiblity_label": "إدارة الطلب {{orderId}}",
       "group_title_label": "جزء من: {{groupTitle}}",
-      "group_title_label_with_parent": "لـ: {{groupTitle}}"
+      "group_title_label_with_parent": "لـ: {{groupTitle}}",
+      "list_layout_accessibility_label": "خيارات التخطيط",
+      "list_title": "طلبات",
+      "list_title_with_pending_orders": "طلبات:",
+      "list_title_confirmed_orders_accessibility_label": "الطلبات: مؤكدة",
+      "list_title_pending_orders_accessibility_label": "الطلبات: معلقة",
+      "switch_order_type_pending_orders_accessibility_label": "تبديل نوع الطلب، وعرض الطلبات المعلقة حاليًا",
+      "switch_order_type_confirmed_orders_accessibility_label": "تبديل نوع الطلب، عرض الطلبات المؤكدة حاليًا",
+      "order_list": {
+        "column_headers": {
+          "order": "طلب",
+          "total": "المجموع",
+          "actions_accessibility_label": "الإجراءات",
+          "products_accessibility_label": "منتجات"
+        },
+        "delivered": "تم التسليم في {{date}}",
+        "empty_state_order_source_description": "سيتم عرض الطلبات المقدمة بواسطة {{email}} هنا فقط.",
+        "empty_state_subtitle": "اذهب إلى المتجر لتقديم الطلب.",
+        "empty_state_title": "لا توجد طلبات حتى الآن",
+        "empty_state_with_location_title": "لا توجد طلبات لـ {{locationName}}",
+        "empty_state_title_for_pending_orders": "لا توجد أوامر معلقة",
+        "no_order_banner": "لاختبار الامتداد الخاص بك على صفحة حالة الطلب، قم بإنشاء طلب.",
+        "estimated_shortform": "تاريخ التقدير: {{date}}",
+        "estimated_delivery": "المتوقع {{date}}",
+        "one_images_accessibility_label": "يتضمن الطلب {{lineItemName1}}",
+        "two_images_accessibility_label": "يتضمن الطلب {{lineItemName1}} و {{lineItemName2}}",
+        "three_images_accessibility_label": "يتضمن الطلب {{lineItemName1}} و {{lineItemName2}} و {{lineItemName3}}",
+        "four_images_accessibility_label": "يتضمن الطلب {{lineItemName1}} و {{lineItemName2}} و {{lineItemName3}} و {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "يتضمن الطلب {{lineItemName1}} و {{lineItemName2}} و {{numberOfAdditionalProducts}} منتجًا إضافيًا",
+        "more_than_four_products_accessibility_label": "يتضمن الطلب {{lineItemName1}} و {{lineItemName2}} و {{lineItemName3}} و {{numberOfAdditionalProducts}} منتجًا آخر",
+        "plus_more": "+ {{numberOfAdditionalProducts}}",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} منتجات",
+        "carousel": {
+          "one_products_accessibility_label": "يتضمن الطلب الكمية {{lineItemName1}} {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "يتضمن الطلب الكمية {{lineItemName1}} {{lineItemQuantity1}} ، الكمية { {{lineItemName2}} {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "يتضمن الطلب الكمية {{lineItemName1}} { {{lineItemQuantity1}} ، الكمية {{ {{lineItemName2}} { {{lineItemQuantity2}} ، الكمية {{lineItemName3}} {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "يتضمن الطلب الكمية {{lineItemName1}} {{lineItemQuantity1}} ، الكمية { {{lineItemName2}} { {{lineItemQuantity2}} ، الكمية { {{lineItemName3}} {{lineItemQuantity3}} ، {{lineItemName4}} {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "يتضمن الطلب الكمية {{lineItemName1}} {{lineItemQuantity1}} ، الكمية { {{lineItemName2}} { {{lineItemQuantity2}} ، الكمية { {{lineItemName3}} { {{lineItemQuantity3}} ، الكمية { {{lineItemName4}} {{lineItemQuantity4}} ، الكمية {{lineItemName5}} {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "يتضمن الطلب الكمية {{lineItemName1}} {{lineItemQuantity1}} ، الكمية { {{lineItemName2}} { {{lineItemQuantity2}} ، الكمية { {{lineItemName3}} {{lineItemQuantity3}} ، الكمية { {{lineItemName4}} { {{lineItemQuantity4}} ، الكمية {{lineItemName5}} { {{lineItemQuantity5}} ، الكمية { {{lineItemName6}} {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "يتضمن الطلب الكمية {{lineItemName1}} {{lineItemQuantity1}} ، والكمية { {{lineItemName2}} { {{lineItemQuantity2}} ، والكمية { {{lineItemName3}} { {{lineItemQuantity3}} ، والكمية {{lineItemName4}} { {{lineItemQuantity4}} ، والكمية {{lineItemQuantity5}} {{lineItemName5}} }} {{lineItemName6}} {{lineItemQuantity6}} والمزيد",
+          "view_order_details": "عرض تفاصيل الطلب",
+          "previous": "سابق",
+          "next": "التالي"
+        },
+        "items": {
+          "one": "{{count}} عنصر",
+          "other": "{{count}} عناصر"
+        },
+        "no_filtered_results_description": "قم بإزالة أو تعديل المرشحات لرؤية طلباتك",
+        "no_filtered_results_title": "لا توجد نتائج مفلترة",
+        "order_link": "عرض الطلب {{name}}",
+        "order_number": "الطلب {{name}}",
+        "orders_title": "مؤكد",
+        "pagination": {
+          "nav_accessibility_label": "أزرار التنقل بين الطلبات",
+          "next": "التالي",
+          "next_accessibility_label": "الطلبات القادمة",
+          "previous": "السابق",
+          "previous_accessibility_label": "الطلبات السابقة",
+          "load_more": "تحميل المزيد",
+          "load_more_accessibility_label": "تحميل المزيد من الطلبات"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "عرض الطلب للحصول على التفاصيل",
+            "estimated_delivery": "المتوقع {{date}}",
+            "last_updated": "آخر تحديث {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "تاريخ التسليم المقدر {{date}}"
+          }
+        },
+        "payment_status": {
+          "gallery_view": {
+            "overdue": "الدفع متأخر",
+            "due": "تاريخ الدفع المستحق: {{date}}",
+            "due_today": "الدفع مستحق اليوم",
+            "due_without_date": "الدفع المستحق",
+            "due_on_fulfillment": "الدفع المستحق عند التنفيذ",
+            "pay_to_confirm": "ادفع للتأكيد",
+            "payment_not_due": "الدفع لم يستحق بعد"
+          },
+          "list_view": {
+            "overdue": "متأخر",
+            "due": "المستحق {{date}}",
+            "due_today": "المستحق اليوم",
+            "paid": "مدفوع",
+            "due_without_date": "حق",
+            "due_on_fulfillment": "مستحق عند الوفاء",
+            "pay_to_confirm": "ادفع للتأكيد",
+            "payment_not_due": "لم يحن موعده بعد"
+          }
+        }
+      }
     },
     "order_details": {
       "shipment_timeline": {
@@ -2431,6 +2524,47 @@
           "invalid_code": "أدخل الرمز الصحيح المكون من 6 أرقام"
         }
       }
+    },
+    "account_information": {
+      "profile_card": {
+        "edit_accessibility_label": "تعديل الملف الشخصي",
+        "email_help_text": "لا يمكن تعديل البريد الإلكتروني",
+        "first_name": "الاسم الأول",
+        "last_name": "اسم العائلة",
+        "email": "بريد إلكتروني",
+        "no_name_provided_accessibility_label": "لم تتم إضافة أي اسم",
+        "phone_number_help_text": "لا يمكن تعديل رقم الهاتف",
+        "save": "يحفظ",
+        "save_accessibility_label": "حفظ الملف الشخصي",
+        "title": "حساب تعريفي",
+        "email_cant_be_blank": "لا يمكن أن يكون البريد الإلكتروني فارغًا",
+        "invalid_email_format": "أدخل بريدًا إلكترونيًا صالحًا"
+      },
+      "verify_new_email_modal": {
+        "title": "التحقق من البريد الإلكتروني",
+        "description": "أدخل الرمز المرسل إلى {{email}}",
+        "one_time_password_label": "رمز مكون من 6 أرقام",
+        "email_resend_button": "إعادة إرسال الرمز",
+        "email_resend_button_accessibility_label": "إعادة إرسال رمز التحقق",
+        "verify_button": "يؤكد",
+        "verify_button_accessibility_label": "التحقق من كلمة المرور لمرة واحدة",
+        "cancel_button": "يلغي",
+        "cancel_button_accessibility_label": "إلغاء تحرير البريد الإلكتروني"
+      },
+      "email_update_success_modal": {
+        "title": "التحقق من البريد الإلكتروني",
+        "description": "تم تحديث البريد الإلكتروني بنجاح. جاري إعادة التوجيه لتسجيل الدخول."
+      },
+      "profile_update_confirmation_message": "تم تحديث الملف الشخصي",
+      "title": "حساب تعريفي",
+      "people": {
+        "pagination": {
+          "load_more": "تحميل المزيد",
+          "load_more_accessibility_label": "تحميل المزيد من الأشخاص",
+          "loading_accessibility_label": "تحميل الأشخاص"
+        }
+      },
+      "add_button": "يضيف"
     }
   }
 }
