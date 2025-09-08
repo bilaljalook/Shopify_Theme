@@ -596,8 +596,3 @@ class Scheduler {
 }
 
 export const scheduler = new Scheduler();
-
-Theme.utilities = {
-  ...Theme.utilities,
-  scheduler: scheduler,
-};
