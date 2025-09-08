@@ -11,8 +11,8 @@ html[dir="rtl"] .page-width {
 }
 
 /* Common text align fixes if theme uses ".text-left/right" */
-html[dir="rtl"] .text-left { text-align: right !important; }
-html[dir="rtl"] .text-right { text-align: left !important; }
+html[dir="rtl"] body .text-left { text-align: right; }
+html[dir="rtl"] body .text-right { text-align: left; }
 
 /* Breadcrumbs / chevrons / arrows */
 html[dir="rtl"] .breadcrumb__separator,
