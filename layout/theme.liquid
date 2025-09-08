@@ -1,10 +1,21 @@
+{% assign iso = localization.language.iso_code | downcase %}
 <!doctype html>
 <html
+  lang="{{ localization.language.iso_code | default: 'en' }}"
+  dir="{% if iso == 'ar' or iso contains 'ar-' %}rtl{% else %}ltr{% endif %}"
   class="no-js{% if request.design_mode %} shopify-design-mode{% endif %}"
-  lang="{{ request.locale.iso_code }}"
 >
   <head>
     {%- render 'stylesheets' -%}
+    {% if iso == 'ar' or iso contains 'ar-' %}
+      {{ 'rtl.css' | asset_url | stylesheet_tag }}
+      <style>
+        :root {
+          --font-body-rtl: 'Noto Sans Arabic', 'Cairo', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Tahoma', sans-serif;
+        }
+        body { font-family: var(--font-body-rtl), inherit; }
+      </style>
+    {% endif %}
 
     {%- if settings.favicon != blank -%}
       <link
@@ -35,7 +46,7 @@
     {{ content_for_header }}
   </head>
 
-  <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
+  <body class="{% if iso == 'ar' or iso contains 'ar-' %}rtl {% endif %}page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }} template-{{ template.name }}">
     {% render 'skip-to-content-link', href: '#MainContent', text: 'accessibility.skip_to_text' %}
     <div id="header-group">
       {% sections 'header-group' %}
