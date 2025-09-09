@@ -414,7 +414,22 @@
             "other": "%{count} عناصر"
           }
         },
-        "alternative_payment_currency_total": "تم تحصيل الرسوم كـ %{amount_due}"
+        "alternative_payment_currency_total": "تم تحصيل الرسوم كـ %{amount_due}",
+        "more_items_modal": {
+          "search_item": "يبحث"
+        },
+        "discount_title": "تخفيض",
+        "discount_title_stacking": {
+          "one": "تخفيض",
+          "other": "خصومات"
+        },
+        "gift_card_title": "بطاقة هدية",
+        "gift_card_label": "بطاقة هدية",
+        "gift_card_placeholder": "بطاقة هدية",
+        "applied_free_shipping_discount_label": "مُطبَّق",
+        "apply_discount_button_label": "يتقدم",
+        "subtotal_label": "المجموع الفرعي",
+        "shipping_label": "شحن"
       },
       "payment": {
         "purchase_options_cancellation_policy_label": "سياسة الإلغاء",
@@ -1721,11 +1736,27 @@
           "add_file": "إضافة ملف",
           "invalid_file_type": "نوع الملف غير مدعوم",
           "dragged_over": "إسقاط الملف للتحميل"
-        }
+        },
+        "page_title": "الدفع",
+        "error_page_title": "خطأ",
+        "breadcrumb": "فتات الخبز",
+        "continue_button_label": "يكمل",
+        "pay_now_button_label": "ادفع الآن",
+        "edit_link_label": "يحرر",
+        "print_policies_link_label": "مطبعة",
+        "cart": "عربة التسوق",
+        "close_modal_label": "يغلق",
+        "close_notice_label": "يغلق",
+        "expand_notice_label": "عرض المزيد",
+        "qr_code": "رمز الاستجابة السريعة"
       },
       "shop_policies": {
         "purchase_options_cancellation_policy": "الإلغاءات",
-        "cookie_preferences": "ملفات تعريف الارتباط"
+        "cookie_preferences": "ملفات تعريف الارتباط",
+        "policy_label": "سياسة",
+        "policies_label": "السياسات",
+        "shipping_policy": "شحن",
+        "contact_information": "اتصال"
       },
       "mor_policies": {
         "terms_and_conditions": "شروط وأحكام التاجر المسجل",
@@ -1995,7 +2026,29 @@
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد عبر البريد الإلكتروني. تتبّع طلبك باستخدام تطبيق \"المتجر\".",
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد عبر البريد الإلكتروني. تتبّع طلبك باستخدام تطبيق \"المتجر\".",
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_email": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد عبر البريد الإلكتروني. تتبّع طلبك باستخدام تطبيق \"المتجر\".",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد عبر البريد الإلكتروني. تتبّع طلبك باستخدام تطبيق \"المتجر\"."
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد عبر البريد الإلكتروني. تتبّع طلبك باستخدام تطبيق \"المتجر\".",
+        "page_title_no_name": "شكرًا لك!",
+        "company_location_title": "موقع",
+        "in_transit": "في طريقها",
+        "delivered": "تم التوصيل",
+        "contact_us": "اتصل بنا",
+        "contact_us_lowercase": "اتصل بنا",
+        "login": "تسجيل الدخول",
+        "fulfillment": {
+          "quantity_label": "كمية"
+        },
+        "order_updates_submit_subscription": "يُقدِّم",
+        "breadcrumbs_submitted": "مُقَدَّم",
+        "breadcrumbs_in_review": "في المراجعة",
+        "breadcrumbs_confirmed": "مؤكد",
+        "missing_shipping_address_banner": {
+          "contact_us": "اتصل بنا"
+        },
+        "announcement": {
+          "close": "يغلق",
+          "expand": "يوسع",
+          "collapse": "ينهار"
+        }
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "الرصيد الحالي %{amount}",
@@ -2099,6 +2152,41 @@
         "payment_gateway_unsupported_for_country": "طريقة الدفع هذه غير متاحة لبلد الشحن الخاص بك.",
         "payment_gateway_unsupported_for_development_store_html": "لتقديم طلب تجريبي، ستحتاج إلى استخدام بوابة دفع تجريبية. تعرّف على المزيد حول <a href=\"%{docs_link}\">اختبار الطلبات في متاجر التطوير</a> .",
         "payment_gateway_unsupported_for_order_above_maximum_orders_html": "لقد وصلتَ إلى الحد الأقصى لطلبات متجر التطوير باستخدام معالج الدفع هذا. لتقديم طلب آخر، ستحتاج إلى استخدام بوابة دفع تجريبية. تعرّف على المزيد حول <a href=\"%{docs_link}\">اختبار الطلبات في متاجر التطوير</a> ."
+      },
+      "alternative_payment_method_banner": {
+        "or": "أو"
+      },
+      "post_purchase": {
+        "components": {
+          "close": "يغلق",
+          "expand": "عرض المزيد",
+          "submit": "يُقدِّم"
+        }
+      },
+      "payment_gateway": {
+        "debit_card_label": "بطاقة الخصم",
+        "login_prompt": {
+          "no_access": {
+            "link": "تسجيل الدخول"
+          }
+        }
+      },
+      "vaulted": {
+        "change_button": "يتغير"
+      },
+      "review": {
+        "title": "مراجعة",
+        "blocks": {
+          "contact_method_title": "اتصال",
+          "billing_address_title": "الفواتير",
+          "shipping_address_title": "سافر على متن سفينة لِـ",
+          "change_link_label": "يتغير",
+          "purchase_order_number_title": "رقم الطلب"
+        },
+        "item_header": {
+          "section": "قسم",
+          "value": "قيمة"
+        }
       }
     },
     "pagination": {
@@ -2106,7 +2194,8 @@
       "next": "التالي"
     },
     "links": {
-      "powered_by_shopify": "مدعوم من Shopify"
+      "powered_by_shopify": "مدعوم من Shopify",
+      "learn_more": "يتعلم أكثر"
     },
     "email_marketing": {
       "open_tracking": {
@@ -2190,6 +2279,70 @@
       "buyer_consent_product": "هذا المنتج عملية شراء متكررة أو مؤجلة. بمواصلتي، أوافق على سياسة الإلغاء %{cancellationPolicyLink} وأُصرّح لك بخصم المبلغ من طريقة الدفع الخاصة بي بالأسعار والتكرار والتواريخ المذكورة في هذه الصفحة حتى يتم تنفيذ طلبي أو إلغاؤه، إن أمكن.",
       "buyer_consent_cart": "أحد أو أكثر من منتجات سلة التسوق لديك عملية شراء متكررة أو مؤجلة. بالمتابعة، أوافق على سياسة الإلغاء %{cancellationPolicyLink} وأُصرّح لك بخصم المبلغ من طريقة الدفع الخاصة بي بالأسعار والتكرار والتواريخ المذكورة في هذه الصفحة حتى يتم تنفيذ طلبي أو إلغاؤه، إن أمكن.",
       "cancellation_policy": "سياسة الإلغاء"
+    },
+    "sentence": {
+      "words_connector": "، ",
+      "two_words_connector": " و ",
+      "last_word_connector": "، و "
+    },
+    "feed": {
+      "more": "أكثر"
+    },
+    "attributes": {
+      "email": "بريد إلكتروني",
+      "password": "كلمة المرور",
+      "last_name": "اسم العائلة",
+      "body": "جسم",
+      "signature": "عنوان"
+    },
+    "addresses": {
+      "zip_code": "الرمز البريدي",
+      "postcode": "شفرة البريد",
+      "pincode": "الرمز البريدي",
+      "region": "منطقة",
+      "province": "مقاطعة",
+      "state": "ولاية",
+      "county": "مقاطعة",
+      "emirate": "إمارة"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "مميز"
+      }
+    },
+    "errors": {
+      "shop_404": {
+        "owner_ctas": {
+          "admin_link_text": "مسؤل"
+        }
+      }
+    },
+    "notices": {
+      "order": {
+        "financial_status": {
+          "pending": "قيد الانتظار",
+          "paid": "مدفوع",
+          "unpaid": "غير مدفوع الأجر",
+          "voided": "ملغاة",
+          "refunded": "تم استرداد المبلغ",
+          "expired": "منتهي الصلاحية"
+        },
+        "fulfillment_status": {
+          "fulfilled": "تم تحقيقها",
+          "complete": "مكتمل",
+          "partial": "جزئي",
+          "restocked": "تم إعادة تخزينها"
+        },
+        "transaction_status": {
+          "success": "نجاح",
+          "pending": "قيد الانتظار",
+          "failure": "فشل",
+          "error": "خطأ"
+        },
+        "cancel_reason": {
+          "other": "آخر"
+        }
+      }
     }
   },
   "customer_accounts": {
