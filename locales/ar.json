@@ -446,7 +446,9 @@
         "subtotal_label_with_quantity": {
           "one": "المجموع الفرعي · %{count} عنصر",
           "other": "المجموع الفرعي · %{count} عناصر"
-        }
+        },
+        "discount_not_found": "غير قادر على العثور على خصم صالح يطابق الكود الذي تم إدخاله",
+        "discount_already_applied": "تم تطبيق خصم على هذا الطلب. لا يمكنك إضافة خصم آخر."
       },
       "payment": {
         "purchase_options_cancellation_policy_label": "سياسة الإلغاء",
@@ -1536,7 +1538,8 @@
             "other": "لم تعد طريقة %{delivery_method} متاحة لهذه العناصر."
           },
           "default_message": {
-            "one": "طريقة التسليم المختارة لم تعد متاحة لهذا العنصر."
+            "one": "طريقة التسليم المختارة لم تعد متاحة لهذا العنصر.",
+            "other": "طريقة التسليم المختارة لم تعد متاحة لهذه العناصر."
           }
         },
         "unshippable_product": {
@@ -1548,6 +1551,13 @@
         "out_of_stock_in_context_label": "هذا المنتج غير متوفر في بلدك/منطقتك.",
         "price_and_quantity_update": {
           "title": "تحديث السعر والكمية"
+        },
+        "price_update": {
+          "description": "لقد تغيرت أسعار هذه العناصر وتم تحديثها في سلة التسوق الخاصة بك."
+        },
+        "out_of_stock": {
+          "description": "هذه العناصر لم تعد متوفرة وتم إزالتها من سلة التسوق الخاصة بك.",
+          "items_unavailable": "بعض العناصر لم تعد متوفرة وتم إزالتها من سلة التسوق الخاصة بك."
         }
       },
       "general": {
@@ -1581,7 +1591,14 @@
             "invalid_signature": "توقيع الخصم غير صالح.",
             "external_delivery_promise_error": "خطأ في جلب وعد التسليم الخارجي.",
             "pickup_points_unavailable": "نقاط الاستلام غير متاحة حاليًا.",
-            "local_pickup_no_delivery_strategy_available": "لم يتم العثور على استراتيجية تسليم محلية متاحة."
+            "local_pickup_no_delivery_strategy_available": "لم يتم العثور على استراتيجية تسليم محلية متاحة.",
+            "wrong_number_of_delivery_lines": "يجب تحديد خط تسليم لكل مجموعة من البضائع.",
+            "options_instructions_invalid": "التعليمات المحددة لا تتطابق مع النمط المتوقع.",
+            "destination_address_required": "يجب إدخال عنوان الوجهة حتى تتمكن من الاستمرار.",
+            "local_pickup_delivery_line_detail_changed": "يجب تغيير استراتيجية التسليم المحلية الحالية حتى نتمكن من الاستمرار.",
+            "selected_pickup_option_no_longer_available": "لم يعد خيار الاستلام المحدد مسبقًا متاحًا.",
+            "origin_location_id_required": "مطلوب معرف موقع المنشأ عند طلب طريقة التسليم بالتجزئة.",
+            "invalid_origin_location_id": "لم يتم العثور على موقع يطابق معرف موقع الأصل."
           },
           "discount": {
             "discounts_not_allowed_for_b2b": "لا يُسمح بالخصومات في متاجر B2B.",
@@ -1695,15 +1712,32 @@
             "bundle_requires_components": "هذه الحزمة من البضائع لا تحتوي على أي مكونات.",
             "merchandise_variant_not_found": "لم يتم العثور على متغير المنتج.",
             "product_not_published": "لم يتم نشر المنتج.",
-            "title_empty": "عنوان البضاعة فارغ."
+            "title_empty": "عنوان البضاعة فارغ.",
+            "only_value_constraint": "لا يُسمح إلا بالقيم الدقيقة في إدخال البضائع.",
+            "mixed_currencies": "تحتوي عملية الخروج على عناصر سطرية بعملات مختلفة.",
+            "bundle_products_not_supported_for_b2b": "لا يمكن إضافة العناصر المجمعة إلى طلبات B2B لهذا الموقع.",
+            "gift_card_with_attributes_not_supported": "لا يتم دعم بطاقات الهدايا ذات السمات المخصصة في عملية الدفع هذه.",
+            "gift_card_with_components_not_supported": "لا يتم دعم بطاقات الهدايا التي تحتوي على مكونات في عملية الدفع هذه.",
+            "duplicated_stable_id": "يتمتع خط البضائع هذا بنفس معرف المنتج مثل خط آخر.",
+            "minimum_quantity_not_met": "كمية بعض العناصر لا تصل إلى الحد الأدنى المطلوب.",
+            "maximum_quantity_exceeded": "كمية بعض العناصر تتجاوز الحد الأقصى المسموح به.",
+            "quantity_increment_not_met": "كمية بعض العناصر لا تصل إلى حدود الطلب.",
+            "quantity_rules_not_met": "كمية بعض العناصر لا تصل إلى حدود الطلب."
           },
           "buyer_identity": {
             "business_customer_does_not_match_company": "جهة الاتصال بالشركة ليس لديها إمكانية الوصول إلى الشركة.",
             "company_location_required": "يجب على العميل اختيار موقع الشركة للاستمرار.",
             "personal_order_not_allowed": "لا يُسمح بالطلبات الشخصية لهذا المتجر.",
             "email_domain_is_invalid": "لا يمكن حل هذا المجال المحدد.",
-            "invalid_customer_profile": "تم تقديم ملف تعريف عميل غير صالح."
-          }
+            "invalid_customer_profile": "تم تقديم ملف تعريف عميل غير صالح.",
+            "company_purchase_permission_required": "ليس لدى العميل إذن لوضع طلبات الشركة.",
+            "contact_info_does_not_match_customer_account": "يجب أن تتطابق معلومات الاتصال مع الحساب الذي قمت بتسجيل الدخول إليه.",
+            "phone_number_does_not_match_expected_pattern": "رقم الهاتف المحدد لا يتطابق مع النمط المتوقع.",
+            "email_required": "يجب أن يكون لديك بريد إلكتروني عند شراء البضائع باستخدام الاشتراك.",
+            "customer_profile_access_restricted": "لا يتوفر لدى Checkout إذن بالوصول إلى ملف تعريف العميل.",
+            "buyer_identity_presentment_currency_does_not_match": "حدثت مشكلة أثناء معالجة طلبك. حاول مرة أخرى بعد بضع دقائق."
+          },
+          "session_identifier_not_unique_error": "لقد حدث خطأ ما في طلبك، يرجى محاولة إتمام عملية الدفع مرة أخرى."
         },
         "full_price": "السعر الكامل:",
         "title": "الدفع - {{shopName}}",
@@ -2158,7 +2192,8 @@
         },
         "first_payment_complete": "تم إكمال الدفعة الأولى",
         "subscriptions_management": {
-          "button_label": "إدارة اشتراكك"
+          "button_label": "إدارة اشتراكك",
+          "description": "انتقل إلى حسابك لعرض اشتراكاتك وإدارتها."
         },
         "gift_card_email_title": {
           "one": "تم إرسال بطاقة الهدية عبر البريد الإلكتروني"
@@ -2167,7 +2202,28 @@
           "other": "تمت إعادة إرسال بطاقات الهدايا."
         },
         "verify_shop_account_title": "التحقق من حساب المتجر الخاص بك",
-        "verify_shop_account_confirmation": "تم حفظ تفاصيل الخروج"
+        "verify_shop_account_confirmation": "تم حفظ تفاصيل الخروج",
+        "shipping_address_map_title": "خريطة جوجل تعرض نقطة عنوان الشحن: %{address}",
+        "order_status_confirmed_with_installments_payment_return": "يرجى إعادة انتباهك إلى مندوب المبيعات.",
+        "shop_phone_description": "ستتلقى رسالة نصية تحتوي على رابط لتطبيق المتجر لمساعدتك في تتبع طلبك.",
+        "in_transit_description_days": "يجب أن تتلقى طلبك خلال %{number} يومًا القادمة.",
+        "picked_up_description_html": "تم استلام طلبك في %{location_name} بتاريخ %{date}.",
+        "login_description": "يمكنك العثور على رقم طلبك في الإيصال الذي تلقيته عبر البريد الإلكتروني.",
+        "login_description_phone": "يمكنك العثور على رقم طلبك في الإيصال الذي تلقيته عبر رسالة نصية.",
+        "cancelled_description": "تم إلغاء طلبك في %{date}. تواصل معنا إذا كانت لديك أي أسئلة.",
+        "order_updates_subscribe_to_email_notifications_failed": "لا يمكننا تخزين هذا البريد الإلكتروني للتحديثات. يُرجى المحاولة مجددًا أو استخدام بريد إلكتروني آخر.",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "سوف تتلقى رسالة نصية تحتوي على بطاقة الهدية الخاصة بك في غضون دقائق قليلة.",
+          "other": "سوف تتلقى رسالة نصية تحتوي على بطاقات الهدايا الخاصة بك في غضون دقائق قليلة."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "سوف تتلقى رسالة بريد إلكتروني تحتوي على بطاقة الهدية الخاصة بك في غضون دقائق قليلة.",
+          "other": "سوف تتلقى رسالة بريد إلكتروني تحتوي على بطاقات الهدايا الخاصة بك في غضون دقائق قليلة."
+        },
+        "gift_card_resend_failure": {
+          "one": "حدثت مشكلة أثناء إعادة إرسال بطاقة الهدية. حاول مرة أخرى أو تواصل معنا.",
+          "other": "حدثت مشكلة أثناء إعادة إرسال بطاقات الهدايا. حاول مرة أخرى أو تواصل معنا."
+        }
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "الرصيد الحالي %{amount}",
@@ -2272,7 +2328,10 @@
         "payment_gateway_unsupported_for_development_store_html": "لتقديم طلب تجريبي، ستحتاج إلى استخدام بوابة دفع تجريبية. تعرّف على المزيد حول <a href=\"%{docs_link}\">اختبار الطلبات في متاجر التطوير</a> .",
         "payment_gateway_unsupported_for_order_above_maximum_orders_html": "لقد وصلتَ إلى الحد الأقصى لطلبات متجر التطوير باستخدام معالج الدفع هذا. لتقديم طلب آخر، ستحتاج إلى استخدام بوابة دفع تجريبية. تعرّف على المزيد حول <a href=\"%{docs_link}\">اختبار الطلبات في متاجر التطوير</a> .",
         "physical_gift_card_duplicate_code": "يحتوي عنصر بطاقة الهدايا المادية على رمز مكرر.",
-        "sms_marketing_phone_invalid": "أدخل رقم هاتف صالح"
+        "sms_marketing_phone_invalid": "أدخل رقم هاتف صالح",
+        "gift_card_invalid": "بطاقة الهدية \"••••%{last_four_characters}\" لم تعد صالحة",
+        "must_use_available_delivery_address": "يجب اختيار عنوان التسليم من عناوين التسليم المتاحة.",
+        "must_use_available_shipping_rate": "يجب اختيار سعر الشحن من أسعار الشحن المتاحة."
       },
       "alternative_payment_method_banner": {
         "or": "أو",
@@ -2298,7 +2357,16 @@
         "fixed_payment_label": "سيكون موعد دفعتك مستحقًا في {{dueDate}} .",
         "fixed_direct_payment_terms": "سيتم خصم المبلغ من بطاقتك في {{dueDate}} .",
         "order_due_on_fulfillment_choose_later": "سيتم استحقاق الدفع الخاص بك بمجرد تنفيذ طلبك.",
-        "deferred_payment_label": "اختر طريقة الدفع لاحقًا"
+        "deferred_payment_label": "اختر طريقة الدفع لاحقًا",
+        "generic_payment_terms": "أنت على شروط {{translatedName}} . سيتم استحقاق دفعتك في {{dueDate}} .",
+        "direct_payment_terms": "أنت على شروط {{translatedName}} . سيتم خصم المبلغ من بطاقتك في {{dueDate}} .",
+        "order_due_on_fulfillment_payment": "سيتم خصم المبلغ من بطاقتك بمجرد تنفيذ طلبك.",
+        "order_deposit_due_on_receipt": "{{depositAmount}} مستحق اليوم. سيتم استحقاق المبلغ المتبقي لاحقًا.",
+        "order_deposit_due_on_fixed_date": "{{depositAmount}} مستحق اليوم. الرصيد المتبقي مستحق في {{dueDate}} .",
+        "draft_order_payment_due_later_no_terms": "سيتم استحقاق الدفع الخاص بك بمجرد تأكيد طلبك.",
+        "draft_order_payment_due_later_no_terms_payment_selected": "سيتم خصم المبلغ من بطاقتك بمجرد تأكيد طلبك.",
+        "draft_order_payment_due_later_terms": "سيتم قبول طلبك لدى {{translatedName}} بمجرد تأكيد طلبك.",
+        "draft_order_payment_due_on_fulfillment": "سيتم استحقاق الدفع الخاص بك بمجرد تأكيد طلبك وتنفيذه."
       },
       "vaulted": {
         "change_button": "يتغير"
@@ -2328,7 +2396,8 @@
       },
       "contextual_availability": {
         "all_products_in_cart_unavailable": {
-          "one": "هذا المنتج غير متوفر في بلدك/منطقتك."
+          "one": "هذا المنتج غير متوفر في بلدك/منطقتك.",
+          "other": "هذه المنتجات غير متوفرة في بلدك/منطقتك."
         }
       },
       "merchandise_unavailable_in_buyer_location": {
@@ -2337,6 +2406,12 @@
         "remove_items_action": {
           "one": "إزالة العنصر غير المتاح",
           "other": "إزالة العناصر غير المتوفرة"
+        },
+        "banner_title": {
+          "some_products_one": "هذا المنتج غير متاح للتسليم إلى %{location_name}.",
+          "some_products_other": "هذه المنتجات غير متاحة للتسليم إلى %{location_name}.",
+          "all_products_one": "المنتج الموجود في سلة التسوق الخاصة بك غير متاح للتسليم إلى %{location_name}.",
+          "all_products_other": "المنتجات الموجودة في سلة التسوق الخاصة بك غير متاحة للتسليم إلى %{location_name}."
         }
       },
       "deliverability": {
@@ -2353,7 +2428,12 @@
           "currency_mismatch": "يتم قبول بطاقات الهدايا فقط في %{shop_currency}",
           "generic": "لم يتم إضافة بطاقة الهدية إلى عملية الدفع",
           "expired": "انتهت صلاحية بطاقة الهدية هذه",
-          "invalid": "أدخل بطاقة هدية صالحة"
+          "invalid": "أدخل بطاقة هدية صالحة",
+          "throttle_limit_exceeded": "لقد تجاوزت الحد الأقصى لعدد المحاولات. حاول مرة أخرى لاحقًا.",
+          "no_longer_available": "لم يعد من الممكن استخدام بطاقة الهدايا هذه مع عملية الدفع هذه"
+        },
+        "shop_cash": {
+          "currency_mismatch": "تم تغيير العملة. يُرجى مراجعة رصيدك النقدي والعروض."
         }
       },
       "payment_errors": {
@@ -2366,21 +2446,47 @@
         "shop_pay_wallet_not_available": "خدمة Shop Pay غير متاحة لهذه الدفعة.",
         "market_manager_blocks_wallet_payments": "طريقة الدفع غير مدعومة في بلدك.",
         "invalid_number": "أدخل رقم بطاقة صالحًا",
-        "invalid_cvc": "أدخل رمز أمان صالحًا"
+        "invalid_cvc": "أدخل رمز أمان صالحًا",
+        "rejected_transaction": "تم رفض دفعتك. حاول مرة أخرى أو استخدم طريقة دفع أخرى.",
+        "deferred_payment_not_allowed": "لا يُسمح بالدفع المؤجل. يُرجى مراجعة طلبك والمحاولة مرة أخرى.",
+        "deferred_payment_required": "هذا الطلب يتطلب دفعًا مؤجلًا. يُرجى مراجعة طلبك والمحاولة مرة أخرى.",
+        "paypal_invalid_token": "لم يكن PayPal متاحًا. حاول مرة أخرى أو استخدم طريقة دفع أخرى.",
+        "three_d_secure_failed": "تعذّر التحقق من دفعتك. حاول مجددًا أو استخدم طريقة دفع أخرى.",
+        "three_d_secure_failed_payment_method": "لم يتم التحقق من بطاقتك. حاول مرة أخرى أو أضف بطاقة أخرى.",
+        "decision_rule_block": "حدثت مشكلة أثناء معالجة دفعتك. يُرجى التواصل مع صاحب المتجر.",
+        "pick_up_card": "تم رفض بطاقتك. حاول مرة أخرى أو استخدم طريقة دفع أخرى.",
+        "cannot_verify": "لم يتم التحقق من بيانات الدفع الخاصة بك. تحقق من بيانات بطاقتك وحاول مرة أخرى.",
+        "payment_method_not_applicable": "طريقة الدفع هذه غير متاحة. استخدم طريقة دفع أخرى.",
+        "card_declined": "تم رفض بطاقتك. حاول مرة أخرى أو استخدم طريقة دفع أخرى.",
+        "paypal_over_capture": "تم تحديث إجمالي طلبك. ادفع باستخدام {{walletName}} لإكمال طلبك.",
+        "payment_method_billing_address": "حدثت مشكلة في عنوان إرسال الفاتورة لطريقة الدفع التي اخترتها، ولم يتم تحصيل أي مبلغ منك. تحقق من العنوان وحاول مرة أخرى أو استخدم طريقة دفع أخرى.",
+        "development_store_order_limit_reached": "لقد وصلتَ إلى الحد الأقصى لطلبات متجر التطوير باستخدام معالج الدفع هذا. لتقديم طلب آخر، ستحتاج إلى استخدام بوابة دفع تجريبية. تعرّف على المزيد حول %{development_store_order_testing_docs_link}."
       },
       "shipping_errors": {
-        "unavailable_selected_address": "الشحن غير متاح للعنوان المحدد"
+        "unavailable_selected_address": "الشحن غير متاح للعنوان المحدد",
+        "shipping_method": "لقد تغيرت خيارات الشحن لطلبك. يُرجى مراجعة اختيارك.",
+        "empty_state": "أدخل عنوان الشحن الخاص بك لعرض طرق الشحن المتاحة.",
+        "unavailable_selected_address_for_region": "الشحن غير متاح لمنطقة {{region}} . اختر عنوانًا آخر للمتابعة.",
+        "shipping_method_not_available_generic": {
+          "one": "لا يمكن شحن طلبك إلى العنوان المحدد. راجع عنوانك للتأكد من صحته وحاول مرة أخرى، أو اختر عنوانًا آخر.",
+          "other": "بعض المنتجات في سلة التسوق الخاصة بك لا يمكن شحنها إلى العنوان الذي أدخلته. راجع عنوانك للتأكد من صحته وحاول مرة أخرى، أو اختر عنوانًا آخر."
+        }
       },
       "processing": {
         "continue_to_payment_gateway_notice": "واصل الدفع لإضافة معلومات الدفع الخاصة بك.",
         "continue_to_payment_gateway_notice_error": "لم يتم التحقق من معلومات الدفع الخاصة بك.",
         "wait": {
-          "no_auto_refresh_html": "إذا لم يتم إعادة توجيهك تلقائيًا، %{link}."
+          "no_auto_refresh_html": "إذا لم يتم إعادة توجيهك تلقائيًا، %{link}.",
+          "medium": {
+            "one": "طلبك قيد المعالجة. وقت الانتظار المتوقع هو %{count} دقيقة.",
+            "other": "جاري معالجة طلبك. مدة الانتظار المتوقعة هي %{count} دقيقة."
+          }
         },
         "redirecting_notice": "انتظر بينما نقوم بإعادة توجيهك.",
         "redirecting_to_bank": "إعادة التوجيه إلى {{bank}}",
         "continue_to_payment_gateway_button_label_error": "تحديث معلومات الدفع",
-        "you_will_not_be_charged": "لن يتم تحصيل رسوم منك بعد"
+        "you_will_not_be_charged": "لن يتم تحصيل رسوم منك بعد",
+        "you_will_receive_confirmation": "نتلقى الكثير من الطلبات حاليًا. من المفترض أن يصلك تأكيد عبر البريد الإلكتروني أو رسالة نصية قريبًا. إذا لم تستلمه خلال الساعة القادمة، فأخبرنا."
       },
       "payment_challenge_modal": {
         "external": {
@@ -2389,7 +2495,11 @@
         "timer_message": "لديك {{timeLeft}} للدفع",
         "copy_text": "نسخ رمز {{paymentMethod}}",
         "open_app_text": "افتح تطبيق {{paymentMethod}}",
-        "header": "ادفع باستخدام {{paymentMethod}}"
+        "header": "ادفع باستخدام {{paymentMethod}}",
+        "instructions": "أكمل عملية الشراء باستخدام رمز {{paymentMethod}} الخاص بك",
+        "qr_code": {
+          "instructions": "أكمل عملية الشراء باستخدام رمز {{paymentMethod}} الخاص بك"
+        }
       },
       "marketing": {
         "post_accept_marketing_checkbox_label": "لقد اشتركت لتلقي الأخبار والعروض عبر البريد الإلكتروني",
@@ -2397,7 +2507,26 @@
           "description": "لن تتلقى أي تذكيرات أخرى بشأن عربة التسوق منا."
         },
         "accept_shop_pay_marketing_checkbox_label": "اشترك في قائمتي للحصول على الأخبار والعروض من هذا المتجر",
-        "accept_sms_checkbox_label": "أرسل لي رسالة نصية بالأخبار والعروض"
+        "accept_sms_checkbox_label": "أرسل لي رسالة نصية بالأخبار والعروض",
+        "pending_accept_marketing_checkbox_label": "تحقق من بريدك الإلكتروني لتأكيد اشتراكك في الأخبار والعروض",
+        "sms": {
+          "disclaimer": {
+            "description_html": "بالتسجيل عبر الرسائل النصية، فإنك توافق على استلام رسائل تسويقية آلية متكررة، بما في ذلك تذكيرات سلة التسوق، على رقم الهاتف المُدخل. الموافقة ليست شرطًا للشراء. لإلغاء الاشتراك، يُرجى الرد بـ \"إيقاف\". وللمساعدة، يُرجى الرد بـ \"مساعدة\". يختلف تكرار الرسائل. قد تُطبق رسوم الرسائل والبيانات. اطلع على %{privacy_policy_link} و%{terms_of_service_link}.",
+            "description_transactional_html": "قد تتلقى رسائل نصية تتعلق بتأكيد الطلب وتحديثات الشحن. لإلغاء الاشتراك، يُرجى الرد بـ \"إيقاف\". وللمساعدة، يُرجى الرد بـ \"مساعدة\". يختلف تكرار الرسائل. قد تُطبق رسوم الرسائل والبيانات. اطلع على %{privacy_policy_modal_link} و%{terms_of_service_modal_link}."
+          }
+        }
+      },
+      "address_management": {
+        "confirm_address_deletion": "هل أنت متأكد أنك تريد حذف العنوان {{address}} ؟"
+      },
+      "store_credit_errors": {
+        "generic_error": "حدثت مشكلة في رصيد متجرك. حاول مرة أخرى أو أعد تحميل الصفحة."
+      },
+      "merchant_instruction_errors": {
+        "empty_stable_id": "تحتوي تعليمات البضاعة %{position} %{name} على معرف ثابت فارغ."
+      },
+      "failed_payment": {
+        "payment_not_processed_text": "لم يتم تحصيل أي مبلغ منك. ارجع إلى سلة التسوق لإكمال عملية الشراء."
       }
     },
     "pagination": {
@@ -2420,7 +2549,8 @@
           "opt_out_html": "إذا كنت لا ترغب في مشاركة هذه المعلومات، يمكنك <a style=\"text-decoration:underline;\" href=\"%{link}\">إلغاء الاشتراك.</a>"
         },
         "opt_in": {
-          "opted_in_html": "<b>لقد اخترت الاشتراك في تتبع البريد الإلكتروني المفتوح.</b>"
+          "opted_in_html": "<b>لقد اخترت الاشتراك في تتبع البريد الإلكتروني المفتوح.</b>",
+          "opt_out_html": "يمكنك <a style=\"text-decoration:underline;\" href=\"%{link}\">إلغاء الاشتراك</a> في تتبع البريد الإلكتروني المفتوح إذا كنت لا ترغب في مشاركة هذه المعلومات."
         },
         "opt_out": {
           "opted_out_html": "<b>لقد قمت بإلغاء الاشتراك في تتبع البريد الإلكتروني المفتوح.</b>",
@@ -2434,7 +2564,8 @@
         "confirmation": "نشكرك على الاشتراك في القائمة البريدية الخاصة بنا."
       },
       "unsubscribed": {
-        "confirmation": "لقد قمت بإلغاء اشتراكك في القائمة البريدية الخاصة بنا."
+        "confirmation": "لقد قمت بإلغاء اشتراكك في القائمة البريدية الخاصة بنا.",
+        "preview": "أنت تقوم بمعاينة ما سيراه العملاء عند إلغاء الاشتراك."
       }
     },
     "filters": {
@@ -2544,7 +2675,9 @@
       "shop_404": {
         "owner_ctas": {
           "admin_link_text": "مسؤل",
-          "header": "هل أنت صاحب المتجر؟"
+          "header": "هل أنت صاحب المتجر؟",
+          "fix_domain": "أكمل إعداد عنوان الويب الجديد، انتقل إلى %{domain_settings_link}. انقر على \"ربط النطاق\" وأدخل: %{domain}.<br> إذا كنت تواجه مشكلة في الدخول إلى متجرك، فجرب صفحة %{forgot_your_store_link}.",
+          "add_storefront": "يمكنك إعداد موقعك الإلكتروني بإضافة قناة المتجر الإلكتروني في صفحة %{admin_link}. إذا واجهت صعوبة في الوصول إلى متجرك، فجرّب صفحة %{forgot_your_store_link}."
         },
         "heros": {
           "store_unavailable": "عذراً، هذا المتجر غير متوفر حالياً.",
@@ -2552,16 +2685,19 @@
         },
         "ctas": {
           "open_a_store": {
-            "header": "افتح متجر Shopify جديدًا"
+            "header": "افتح متجر Shopify جديدًا",
+            "caption": "ابدأ تجربة مجانية لمدة 3 أيام، ثم استمر مقابل 1 دولار شهريًا للأشهر الثلاثة التالية."
           },
           "editions": {
             "header": "تحقق من إصدارات Shopify",
             "link_text": "استكشف أحدث الإصدارات"
           },
           "store_owner": {
-            "header": "هل أنت صاحب المتجر؟"
+            "header": "هل أنت صاحب المتجر؟",
+            "caption": "هل تواجه صعوبة في الوصول إلى متجرك؟ جرّب ميزة %{forgot_your_store_link}. لإعادة تفعيل متجرك، تواصل مع %{shopify_support_link}."
           }
-        }
+        },
+        "title": "أنشئ موقعًا للتجارة الإلكترونية وبع عبر الإنترنت! برنامج التجارة الإلكترونية من Shopify"
       },
       "discount_limit_reached": "لقد وصل هذا الخصم إلى الحد الأقصى للاستخدام",
       "customer_already_used_once_per_customer_discount_notice": "لقد وصل هذا الخصم إلى الحد الأقصى للاستخدام",
@@ -2577,7 +2713,9 @@
       "contains_html_tags": "لا يمكن أن تحتوي على علامات HTML",
       "contains_spaces": "يبدأ أو ينتهي بمسافات.",
       "email_domain_invalid": "المزود غير مدعوم",
-      "invalid_for_country": "غير صالح لـ %{country}"
+      "invalid_for_country": "غير صالح لـ %{country}",
+      "discount_not_found": "غير قادر على العثور على خصم صالح يطابق الكود الذي تم إدخاله",
+      "reset_password_html": "هذا البريد الإلكتروني مرتبط بحساب. إذا كان هذا الحساب ملكك، يمكنك <a href=\"/account/login#recover\">إعادة تعيين كلمة المرور.</a>"
     },
     "notices": {
       "order": {
@@ -2624,7 +2762,13 @@
         "merchandise_not_applicable": "لا يمكن شراء العنصر كما تم تكوينه.",
         "empty_update": "لا يمكن تحديث عربة التسوق الفارغة",
         "product_not_available": "المنتج غير متوفر",
-        "link_no_longer_exists": "الرابط لم يعد موجودا."
+        "link_no_longer_exists": "الرابط لم يعد موجودا.",
+        "only_one_added_to_cart": "تم إضافة عنصر واحد فقط إلى سلة التسوق الخاصة بك بسبب التوفر.",
+        "only_n_added_to_cart": "تمت إضافة %{quantity} عنصر فقط إلى سلة التسوق الخاصة بك بسبب التوفر.",
+        "maximum_available_quantity_reached": "الكمية القصوى لهذا العنصر موجودة بالفعل في سلة التسوق الخاصة بك.",
+        "bundle_requires_components": "لا يمكن إضافة منتج الحزمة '%{name}' إلى سلة التسوق.",
+        "gift_card_with_components_not_supported": "لا يمكن إضافة منتج الحزمة '%{name}' إلى سلة التسوق.",
+        "gift_card_price_must_be_greater_than_zero": "لا يمكن إضافة منتج الحزمة '%{name}' إلى سلة التسوق."
       },
       "tags": {
         "add_articles": "تضييق نطاق البحث إلى المقالات التي تحتوي أيضًا على العلامة %{tag}",
