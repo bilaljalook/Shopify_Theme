@@ -2223,6 +2223,15 @@
         "gift_card_resend_failure": {
           "one": "حدثت مشكلة أثناء إعادة إرسال بطاقة الهدية. حاول مرة أخرى أو تواصل معنا.",
           "other": "حدثت مشكلة أثناء إعادة إرسال بطاقات الهدايا. حاول مرة أخرى أو تواصل معنا."
+        },
+        "payment_method_not_charged": "غير مشحون",
+        "thank_you_confirmed_items_with_email": {
+          "one": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني مع رقم طلبك قريبًا",
+          "other": "سوف تتلقى رسائل بريد إلكتروني للتأكيد مع أرقام طلبك قريبًا"
+        },
+        "thank_you_confirmed_items_with_phone": {
+          "one": "سوف تتلقى رسالة نصية تأكيدية برقم طلبك قريبًا",
+          "other": "ستتلقى رسائل نصية للتأكيد تحتوي على أرقام طلبك قريبًا"
         }
       },
       "payment_summary": {
@@ -3468,6 +3477,9 @@
             "load_more_accessibility_label": "تحميل المزيد من المبالغ القابلة للانتهاء"
           }
         }
+      },
+      "add_payment_method_dropdown": {
+        "bank_account": "حساب بنكي"
       }
     },
     "payment_method_brands": {
