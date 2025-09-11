@@ -262,10 +262,10 @@
     }
   },
   "placeholders": {
-    "password": "Password",
+    "password": "كلمة المرور",
     "search": "بحث",
-    "product_title": "Product title",
-    "collection_title": "Collection title"
+    "product_title": "عنوان المنتج",
+    "collection_title": "عنوان المجموعة"
   },
   "products": {
     "product": {
