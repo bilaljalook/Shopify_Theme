@@ -240,9 +240,9 @@
     "use_fewer_filters_html": "Try using fewer filters, or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all filters</a>.",
     "view_more_details": "عرض المزيد من التفاصيل",
     "your_cart_is_empty": "عربة التسوق فارغة",
-    "product_count": "Product count",
-    "errors": "Errors",
-    "wrong_password": "Wrong password"
+    "product_count": "عدد المنتجات",
+    "errors": "أخطاء",
+    "wrong_password": "كلمة مرور خاطئة"
   },
   "fields": {
     "separator": "to"
