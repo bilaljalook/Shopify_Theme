@@ -1881,7 +1881,9 @@
         "autocomplete_close": "إغلاق الاقتراحات",
         "tooltip_accessibility_label": "مزيد من المعلومات",
         "skip_to_content": "انتقل إلى المحتوى",
-        "complete_purchase_button_label": "أكمل الطلب"
+        "complete_purchase_button_label": "أكمل الطلب",
+        "continue_to_review": "مراجعة الطلب",
+        "back_to_cart": "العودة إلى عربة التسوق"
       },
       "shop_policies": {
         "purchase_options_cancellation_policy": "الإلغاءات",
