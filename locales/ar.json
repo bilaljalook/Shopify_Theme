@@ -94,22 +94,22 @@
   },
   "blocks": {
     "contact_form": {
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone (optional)",
-      "comment": "Comment",
-      "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
-      "error_heading": "Please adjust the following:"
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف (اختياري)",
+      "comment": "تعليق",
+      "post_success": "شكراً على اتصالك بنا. سنرد عليك في أقرب وقت ممكن.",
+      "error_heading": "يرجى تعديل ما يلي:"
     },
     "email_signup": {
-      "label": "Email",
-      "placeholder": "Email address",
-      "success": "Thanks for subscribing!"
+      "label": "البريد الإلكتروني",
+      "placeholder": "البريد الإلكتروني",
+      "success": "شكرا على الاشتراك!"
     },
-    "filter": "Filter",
+    "filter": "فلتر",
     "load_video": "Load video: {{ description }}",
-    "sold_out": "Sold out",
-    "payment_methods": "Payment methods"
+    "sold_out": "بيعت بالكامل",
+    "payment_methods": "طرق الدفع"
   },
   "blogs": {
     "article": {
