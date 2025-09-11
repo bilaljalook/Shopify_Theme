@@ -1847,14 +1847,14 @@
         },
         "page_title": "الدفع",
         "error_page_title": "خطأ",
-        "breadcrumb": "فتات الخبز",
+        "breadcrumb": "مسار التنقل",
         "continue_button_label": "يكمل",
         "pay_now_button_label": "ادفع الآن",
         "edit_link_label": "يحرر",
-        "print_policies_link_label": "مطبعة",
+        "print_policies_link_label": "طباعة",
         "cart": "عربة التسوق",
-        "close_modal_label": "يغلق",
-        "close_notice_label": "يغلق",
+        "close_modal_label": "إغلاق",
+        "close_notice_label": "إغلاق",
         "expand_notice_label": "عرض المزيد",
         "qr_code": "رمز الاستجابة السريعة",
         "forwarding_indicator": {
@@ -1879,7 +1879,9 @@
         "back_to_payment_method": "العودة إلى الدفع",
         "autocomplete_single_item": "1 عنصر متاح",
         "autocomplete_close": "إغلاق الاقتراحات",
-        "tooltip_accessibility_label": "مزيد من المعلومات"
+        "tooltip_accessibility_label": "مزيد من المعلومات",
+        "skip_to_content": "انتقل إلى المحتوى",
+        "complete_purchase_button_label": "أكمل الطلب"
       },
       "shop_policies": {
         "purchase_options_cancellation_policy": "الإلغاءات",
